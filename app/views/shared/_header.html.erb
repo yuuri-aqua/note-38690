@@ -1,6 +1,6 @@
 <header class='main-header'>
   <div class='nav'>
-    <h1>Note To Self +</h1>
+    <%= link_to "Note To Self +",root_path, class: "logo" %>
     <ul class='lists-right'>
       <% if user_signed_in? %>
       <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
