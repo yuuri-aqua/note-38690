@@ -1,0 +1,53 @@
+.main-header{
+  height: 75px;
+  padding: 15px 30px 10px 15px;
+  background-image: linear-gradient(180deg, #343434, #5d5d5d);
+}
+
+.nav{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  color: #d2d2d2;
+}
+
+.lists-right {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+.lists-right li{
+  font-size: 16px;
+}
+
+
+
+.user-nickname {
+  text-decoration: none;
+  color: #d2d2d2;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.logout {
+  text-decoration: none;
+  color: #d2d2d2;
+}
+
+.login {
+  text-decoration: none;
+  color: #d2d2d2;
+  margin-right: 30px;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #d2d2d2;
+}
