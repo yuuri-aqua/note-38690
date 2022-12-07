@@ -1,0 +1,17 @@
+<div class="posts-id-all">
+  <% @posts.each do |post| %>
+    <div class="posts-id">
+    <!-- 投稿したタイトルを記述する -->
+      <div class="posts-title-id">
+          <p><%= post.title %></p>
+      </div>
+
+      <!-- 投稿したテキスト（本文）を記述する -->
+      <div class="posts-text-id">
+        <p><%= post.text %></p>
+      </div>
+      
+    </div>
+  <% end %>
+    
+</div>
