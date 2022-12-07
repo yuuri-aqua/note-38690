@@ -1,9 +1,21 @@
-<html>
-  <body>
-    <%= render "shared/header" %>
-    <div class='main'>
-
+<body>
+  <%= render "shared/header" %>
+  <div class= 'main'>
+    <div class= "posts_all">
+      <div class="posts">
+        <%# 投稿一覧 %>
+          <%= render "posts_all" %>
+        <%# 投稿フォーム %>
+        <%= form_with model: @post, class: 'form', local: true do |f| %>
+          <div class="form-input">
+            <%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %>
+            <%= f.text_field :text, class: 'form-contents', placeholder: 'type a contents' %>
+            <%= f.file_field :image, class: 'image' %>
+          </div><br>
+          <%= f.submit '送信', class: 'form-submit' %>
+        <% end %>
+      </div>
     </div>
-    <%= render "shared/footer" %>
-  </body>
-</html>
+  </div>
+  <%= render "shared/footer" %>
+</body>

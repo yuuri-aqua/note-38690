@@ -1,0 +1,21 @@
+.posts-id-all{
+  margin: 30px;
+  padding: 0px;
+  padding-bottom: 200px;
+}
+
+.posts-id {
+padding: 20px 0;
+}
+
+.posts-text-id {
+  height: 200px;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+.posts-title-id {
+  height: 50px;
+  width: 100%;
+  background-color: gray;
+}
