@@ -10,6 +10,6 @@ class  PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:title, :text).merge(user_id: current_user.id)
+    params.permit(:title, :text, :image).merge(user_id: current_user.id)
   end
 end
