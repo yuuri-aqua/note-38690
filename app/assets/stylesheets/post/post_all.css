@@ -8,14 +8,20 @@
 padding: 20px 0;
 }
 
-.posts-text-id {
-  height: 200px;
-  width: 100%;
-  background-color: aquamarine;
-}
 
 .posts-title-id {
   height: 50px;
   width: 100%;
   background-color: gray;
+}
+
+.posts-text-id {
+  min-height: 200px;
+  width : 100%;
+  background-color: aquamarine;
+}
+
+
+.pasts-image-id {
+  margin: 10px;
 }

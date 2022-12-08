@@ -9,8 +9,9 @@
       <!-- 投稿したテキスト（本文）を記述する -->
       <div class="posts-text-id">
         <p><%= post.text %></p>
+        <%= image_tag post.image.variant(resize: '300x300'), class: 'pasts-image-id' if post.image.attached? %>
       </div>
-      
+
     </div>
   <% end %>
     
