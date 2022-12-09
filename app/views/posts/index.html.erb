@@ -6,13 +6,13 @@
         <%# 投稿一覧 %>
           <%= render "posts_all" %>
         <%# 投稿フォーム %>
-        <%= form_with model: @post, class: 'form', local: true do |f| %>
-          <div class="form-input">
-            <%= f.text_field :title, class: 'form-title', placeholder: 'type a title' %>
-            <%= f.text_field :text, class: 'form-contents', placeholder: 'type a contents' %>
-            <%= f.file_field :image, class: 'image' %>
+        <%= form_with model: @post, class: 'form-id', local: true do |f| %>
+          <div class="form-input-id">
+            <%= f.text_field :title, class: 'form-title-id', placeholder: 'タイトル' %>
+            <%= f.text_area :text, class: 'form-contents-id', placeholder: '本文' %>
+            <%= f.file_field :image, class: 'image-id' %>
           </div><br>
-          <%= f.submit '送信', class: 'form-submit' %>
+          <%= f.submit '送信', class: 'form-submit-id', type: 'button', onclick: 'submit();' %>
         <% end %>
       </div>
     </div>

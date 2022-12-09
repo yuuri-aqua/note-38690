@@ -24,7 +24,7 @@
 }
 
 
-.form {
+.form-id {
   background-color: #DDDDDD;
   height: 180px;
   width: 100%;
@@ -34,42 +34,44 @@
   bottom: 30px;
 }
 
-.form-input {
-  background-color: white;
+.form-input-id {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #DDDDDD;
 }
 
-.form-title {
-  border: none;
+.form-title-id {
+  outline: 0;
+  border: 0px solid gray;
   height: 30px;
   width: 100%;
+  margin: 0;
   padding-left: 10px;
   background-color: #efefef;
 }
 
-.form-contents {
-  border: none;
+.form-contents-id {
+  outline: 0;
+  border: 0px solid gray;
   height: 80px;
   width: 100%;
   padding-left: 10px;
+  font-weight: lighter;
 }
 
-.form-submit {
-  background-color: #38AEF0;
+.image-id {
+  color: rgb(0, 0, 0);
+  height: 30px;
+  margin: 10px 0 0 0;
+  border: none;
+  background-color: #DDDDDD;
+}
+
+.form-submit-id {
+  background-color: #106127;
   border: none;
   color: white;
   font-size: 12px;
-  padding: 5px;
   width: 60px;
-}
-
-.image {
-  color: rgb(0, 0, 0);
-  height: 30px;
-  margin: 0 0 10px 0;
-  border: none;
-  background-color: #DDDDDD;
+  height: 102px;
 }
