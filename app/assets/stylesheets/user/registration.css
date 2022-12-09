@@ -7,16 +7,15 @@
   justify-content: center;
 }
 
-/* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
   width: 50%;
+  padding-top:100px ;
   background-color: white;
-  padding-bottom: 70px;
 }
 
 .form-header {
   width: 100%;
-  height: 120px;
+  height: 100px;
   text-align: center;
   font-size: 22px;
 }
@@ -54,16 +53,24 @@
   margin-top: 5px;
   height: 48px;
   padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #dedede;
   background: #fff;
   font-size: 16px;
   resize: none;
 }
 
+input:focus,textarea:focus {
+  outline:none;
+  border: 2px  solid #3f6c53;
+}
+
+.indispensable{
+  color: rgb(148, 45, 45);
+}
+
 .info-text {
   color: #888;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 3px;
 }
 
@@ -75,51 +82,10 @@
   font-size: 15px;
 }
 
-.input-name-wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.input-name {
-  width: 130px;
-  margin: 5px 20px 0 20px;
-  height: 48px;
-  line-height: 30px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 14px;
-  resize: none;
-}
-
-.input-birth-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.input-birth-wrap select {
-  width: 75px;
-  margin-top: 5px;
-  height: 45px;
-  padding-left: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.input-birth-wrap p {
-  line-height: 60px;
-  padding: 0 5px;
-}
 
 .field_with_errors {
   display: contents;
 }
-
 
 .form-bottom-text {
   font-size: 15px;
@@ -133,7 +99,7 @@
 }
 
 .form-bottom-text>span {
-  color: #0099e8;
+  color: #0c4425;
   cursor: pointer;
 }
 
@@ -142,10 +108,10 @@
   margin: 0 auto;
 }
 
-.register-red-btn {
+.register-green-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #0c5537;
+  border: none;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
@@ -154,7 +120,7 @@
 
 .register-info {
   margin: 30px 180px 0 0;
-  color: #0099e8;
+  color: #00b25f;
   text-align: right;
   cursor: pointer;
 }

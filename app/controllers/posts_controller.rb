@@ -1,7 +1,7 @@
 class  PostsController < ApplicationController
   def index
     @user = current_user
-    @posts = @user.posts
+    @posts = @user.posts.order(id: "DESC")
   end
 
   def create
