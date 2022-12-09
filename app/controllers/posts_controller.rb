@@ -1,4 +1,5 @@
 class  PostsController < ApplicationController
+
   def index
     @user = current_user
     @posts = @user.posts.order(id: "DESC")
@@ -12,4 +13,5 @@ class  PostsController < ApplicationController
   def post_params
     params.permit(:title, :text, :image).merge(user_id: current_user.id)
   end
+
 end

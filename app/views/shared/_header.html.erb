@@ -1,6 +1,11 @@
 <header class='main-header'>
   <div class='nav'>
-    <%= link_to "Note To Self +",root_path, class: "logo" %>
+    <% if user_signed_in? %>
+      <%= link_to current_user.nickname + "'s Note", posts_path, class: "logo" %>
+    <% else %>
+      <%= link_to "Note To Self +", root_path, class: "logo" %>
+    <% end %>
+
     <ul class='lists-right'>
       <% if user_signed_in? %>
       <li><%= link_to current_user.nickname, posts_path, class: "user-nickname" %></li>
