@@ -3,17 +3,13 @@
   <div class= 'main'>
     <div class= "posts_all">
       <div class="posts">
-        <%# 投稿一覧 %>
-          <%= render "posts_all" %>
-        <%# 投稿フォーム %>
-        <%= form_with model: @post, class: 'form-id', local: true do |f| %>
-          <div class="form-input-id">
-            <%= f.text_field :title, class: 'form-title-id', placeholder: 'タイトル' %>
-            <%= f.text_area :text, class: 'form-contents-id', placeholder: '本文' %>
-            <%= f.file_field :image, class: 'image-id' %>
-          </div><br>
-          <%= f.submit '送信', class: 'form-submit-id', type: 'button', onclick: 'submit();' %>
-        <% end %>
+<br><br>
+      <%= link_to "投稿する", new_post_path, class: "logo" %>
+
+
+        <%= render "posts_all" %>
+
+        
       </div>
     </div>
   </div>

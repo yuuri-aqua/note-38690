@@ -5,13 +5,27 @@ class  PostsController < ApplicationController
     @posts = @user.posts.order(id: "DESC")
   end
 
+
+  def new
+    @user = current_user
+    @post = Post.new
+    @posts = @user.posts.order(id: "DESC")
+  end
+
   def create
-    @post = Post.create(post_params)
+
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to posts_path
+    else
+      render :new
+    end
   end
 
   private
+
   def post_params
-    params.permit(:title, :text, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :text, :image, :category_id).merge(user_id: current_user.id)
   end
 
 end
