@@ -5,13 +5,17 @@
       <div class="posts">
         <%= render "posts_all" %>
 
-        <%= form_with model: @post, class: 'form-id', local: true do |f| %>
+        <%= form_with model: @post_form, url: posts_path, id: 'new_post', class:'form-id', local: true do |f| %>
           <div class="form-input-id">
             <%= f.text_field :title, class: 'form-title-id', placeholder: 'タイトル' %>
             <%= f.text_area :text, class: 'form-contents-id', placeholder: '本文' %>
             
             <%= f.file_field :image, class: 'image-id' %>
-            <%= f.collection_select :category_id, Category.all, :id, :genre,{include_blank: "カテゴリを選択"}, {class: "category-id"} %>
+              <div class='category_box'>
+                <%= f.collection_select :category_id, Category.all, :id, :genre,{include_blank: "カテゴリを選択"}, {class: "category-id"} %>
+                <%= link_to "カテゴリを追加", new_category_path %>
+              </div>
+            <%= f.text_field :tag_name, placeholder: 'タグ追加：,半角カンマ区切りで複数可)', class: 'tag-id' %>
           </div><br>
           <%= f.submit '送信', class: 'form-submit-id', type: 'button', onclick: 'submit();' %>
         <% end %>
