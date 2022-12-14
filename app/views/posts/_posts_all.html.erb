@@ -3,6 +3,7 @@
     <% @posts.each do |post| %>
       <div class="posts-id">
 
+        <p><%= post.category.genre %></p>
         <div class="posts-title-id">
           <p><%= post.title %></p>
         </div>
@@ -13,8 +14,8 @@
 
         <div class="posts-text-id">
           <p><%=safe_join(post.text.split("\n"),tag(:br))%></p>
-          
           <%= image_tag post.image.variant(resize: '400x400'), class: 'pasts-image-id' if post.image.attached? %>
+          <p><%= post.tags.first.tag_name if post.tags.first.present? %></p>
         </div>
 
       </div>

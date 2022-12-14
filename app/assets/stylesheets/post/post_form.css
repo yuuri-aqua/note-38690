@@ -75,6 +75,15 @@
   background-color: #DDDDDD;
 }
 
+.tag-id{
+  color: rgb(0, 0, 0);
+  width: 120px;
+  height: 30px;
+  margin: 10px 0 0 0;
+  background-color: #DDDDDD;
+}
+
+
 
 .form-submit-id {
   background-color: #106127;
