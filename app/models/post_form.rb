@@ -1,22 +1,24 @@
 class PostForm
   include ActiveModel::Model
 
-  attr_accessor :title, :text, :image, :created_at, :updated_at, :user_id, :category_id,:tag_name
+  attr_accessor :title, :text, :image, :user_id, :category_id, :tag_name
 
   with_options presence: true do
-    validates :title
     validates :text
-    validates :image
     validates :user_id
-    validates :category_id
   end
 
-  def save
+
+  def save(tag_list)
     post = Post.create(title: title, text: text, image: image, user_id: user_id, category_id: category_id)
-    tag = Tag.where(tag_name: tag_name).first_or_initialize
-    tag.save
-    PostTagRelation.create(post_id: post.id, tag_id: tag.id)
+    
+    tag_list.each do |tag_name|
+      tag = Tag.where(tag_name: tag_name).first_or_initialize
+      tag.save
+      PostTagRelation.create(post_id: post.id, tag_id: tag.id)
+    end
   end
+
 
   def update(params, post)
     #一度タグの紐付けを消す

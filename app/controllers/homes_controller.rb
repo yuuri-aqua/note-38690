@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  before_action :move_to_mypage, only: :index
+  # before_action :move_to_mypage, only: :index
     
   def index
   end
