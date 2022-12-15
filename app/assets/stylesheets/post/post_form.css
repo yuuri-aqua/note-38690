@@ -67,6 +67,18 @@
   background-color: #DDDDDD;
 }
 
+.image-pre > p{
+  height: 100px;
+  width: auto;
+  display: flex;
+}
+
+.image-pre > p > img{
+  width: auto;
+  max-height: 100%;
+  margin: 5px 8px 0 0;
+}
+
 .category-id{
   color: rgb(0, 0, 0);
   width: 120px;
