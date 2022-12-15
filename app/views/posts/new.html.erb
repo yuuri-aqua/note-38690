@@ -4,10 +4,14 @@
 
 <body>
   <%= render "shared/header" %>
+
   <div class= 'main'>
     <div class= "posts_all">
       <div class="posts">
-        <%= render "posts_all" %>
+        <% if @posts.present? %>
+          <%= render "posts_all" %>
+        <% end %>
+
         <%= render "form" %>
       </div>
     </div>

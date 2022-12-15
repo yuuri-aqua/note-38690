@@ -5,11 +5,10 @@ class  PostsController < ApplicationController
     @posts = @user.posts.order(id: "DESC")
   end
 
-
   def new
     @user = current_user
-    @post_form = PostForm.new
     @posts = @user.posts.order(id: "DESC")
+    @post_form = PostForm.new
   end
 
 
@@ -20,6 +19,8 @@ class  PostsController < ApplicationController
       @post_form.save(tag_list)
       redirect_to posts_path
     else
+      @user = current_user
+      @posts = @user.posts.order(id: "DESC")
       render :new
     end
   end
