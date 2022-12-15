@@ -1,7 +1,7 @@
 class PostForm
   include ActiveModel::Model
 
-  attr_accessor :title, :text, :image, :user_id, :category_id, :tag_name
+  attr_accessor :title, :text, :images, :user_id, :category_id, :tag_name
 
   with_options presence: true do
     validates :text
@@ -10,7 +10,7 @@ class PostForm
 
 
   def save(tag_list)
-    post = Post.create(title: title, text: text, image: image, user_id: user_id, category_id: category_id)
+    post = Post.create(title: title, text: text, images: images, user_id: user_id, category_id: category_id)
     
     tag_list.each do |tag_name|
       tag = Tag.where(tag_name: tag_name).first_or_initialize

@@ -1,36 +1,53 @@
 <div class="posts-id-all">
   <% if @posts.present? %>
     <% @posts.each do |post| %>
-      <div class="posts-id">
+      <div class="posts-main-box">
 
-        <p>
-    <%= post.category.genre %>
-        </p>
+        <% if post.title.present? %>
         <div class="posts-title-id">
           <p><%= post.title %></p>
         </div>
-
+        <% end %>
+        
         <div class="posts-timestamp-id">
           <p><%= post.created_at %></p>
         </div>
 
         <div class="posts-text-id">
-          <p><%=safe_join(post.text.split("\n"),tag(:br))%></p>
-          <p><%= image_tag post.image.variant(resize: '400x400'), class: 'pasts-image-id' if post.image.attached? %></p>
-          <p>
-            <div id = "bookmark_button_<%= post.id %>">
-            <%= render "bookmarks/bookmark", post: post %>
+          <%=safe_join(post.text.split("\n"),tag(:br))%>
+
+          <div class="posts-image-id">
+            <% post.images.each do |image| %>
+              <div class="posts-image-one">
+              <%= image_tag(image) %>
+              </div>
+            <% end %>
+          </div>
+          
+          <div class="posts-sub-box">
+
+            <div class="posts-category-id">
+              <p><%= post.category.genre %></p>
             </div>
 
-            <% post.tags.each do |tag| %>
-              <%#= link_to tag.tag_name, "/users/#{prototype.user.id}", class: :card__user %>
-              <%= '#' + tag.tag_name if post.tags.first.present? %>
-            <% end %>
-          </p>
+            <div class="posts-bookmark-id">
+              <div id = "bookmark_button_<%= post.id %>">
+                <%= render "bookmarks/bookmark", post: post %>
+              </div>
+            </div>
+
+            <div class="posts-tag-id">
+              <% post.tags.each do |tag| %>
+                <%= '#' + tag.tag_name if post.tags.first.present? %>
+              <% end %>
+            </div>
+          </div>
+          
         </div>
 
       </div>
     <% end %>
+
   <% else %>
     <div class="posts-id">
 
