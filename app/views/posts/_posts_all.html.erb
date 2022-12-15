@@ -16,7 +16,13 @@
 
         <div class="posts-text-id">
           <p><%=safe_join(post.text.split("\n"),tag(:br))%></p>
-          <p><%= image_tag post.image.variant(resize: '400x400'), class: 'pasts-image-id' if post.image.attached? %></p>
+
+       <div class="posts-image-id">
+    <% post.images.each do |image| %>
+      <%= image_tag(image, width:100) %>
+    <% end %>
+</div>
+
           <p>
             <div id = "bookmark_button_<%= post.id %>">
             <%= render "bookmarks/bookmark", post: post %>
