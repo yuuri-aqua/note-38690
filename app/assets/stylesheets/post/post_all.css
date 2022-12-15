@@ -4,9 +4,11 @@
   padding-bottom: 220px;
 }
 
-.posts-id {
+.posts-main-box {
   padding: 20px 0;
 }
+
+
 
 .posts-title-id {
   height: 30px;
@@ -31,12 +33,41 @@
 
 .posts-text-id {
   width : 100%;
-  padding: 10px 15px;
+  padding: 10px 15px 0 15px;
   line-height: 1.5;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
 }
 
-.pasts-image-id {
-  margin: 10px 0;
+.posts-image-id {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.posts-image-one > img {
+  height: 30vh;
+  width: auto;
+  margin: 0 10px 0 0;
+}
+
+
+
+.posts-sub-box{
+  display: flex;
+}
+
+.posts-category-id {
+  color: #545f58;
+}
+
+.posts-bookmark-id{
+  border: none;
+
+}
+
+.posts-tag-id{
+  color: #545f58;
 }
