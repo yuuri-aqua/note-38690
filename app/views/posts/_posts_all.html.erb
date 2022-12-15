@@ -19,7 +19,8 @@
           <p><%= image_tag post.image.variant(resize: '400x400'), class: 'pasts-image-id' if post.image.attached? %></p>
           <p>
             <% post.tags.each do |tag| %>
-              <%= '#' + post.tags.last.tag_name if post.tags.first.present? %>
+              <%#= link_to tag.tag_name, "/users/#{prototype.user.id}", class: :card__user %>
+              <%= '#' + tag.tag_name if post.tags.first.present? %>
             <% end %>
           </p>
         </div>
