@@ -8,15 +8,13 @@
   <div class= 'main'>
     <div class= "posts_all">
       <div class="posts">
-        <!-- 入力フォーム有りver.（all)のCSSを適用 -->
+        <!-- 入力フォーム有りver.(all)のCSSを適用 -->
         <div class="posts-id-all">
-          <% if @posts.present? %>
-            <%= render "posts_all" %>
-          <% end %>
+          <%= render "posts_show" %>
         </div>
 
-        <!-- GETメソッドver. -->
-        <%= form_with model: @post_form, url: posts_path, id: 'new_post', class:'form-id', local: true do |f| %>
+        <!-- PATCHメソッドver. -->
+        <%= form_with model: @post_form, url: post_path, method: :patch, id: 'new_post', class:'form-id', local: true do |f| %>
 
           <div class="form-input-id">
             <%= f.text_field :title, class: 'form-title-id', placeholder: 'タイトル' %>
@@ -42,9 +40,9 @@
 
         <% end %>
 
-
       </div>
     </div>
   </div>
+  
   <%= render "shared/footer" %>
 </body>

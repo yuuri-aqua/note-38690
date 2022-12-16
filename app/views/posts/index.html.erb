@@ -7,18 +7,22 @@
   <%= render "shared/header" %>
 
   <div class= 'main'>
-  <br><br>
-      <%= link_to "投稿する", new_post_path, class: "logo" %>
+    <br><br>
+    <%= link_to "投稿する", new_post_path, class: "logo" %>
 
     <div class= "posts_all">
       <div class="posts">
         <% if @posts.present? %>
-          <%= render "posts_all" %>
+          <!-- 入力フォーム無しver.(show)のCSSを適用 -->
+          <div class="posts-id-show"> 
+
+            <%= render "posts_all" %>
+
+          </div>
         <% end %>
-
-
       </div>
     </div>
+
   </div>
   <%= render "shared/footer" %>
 </body>
