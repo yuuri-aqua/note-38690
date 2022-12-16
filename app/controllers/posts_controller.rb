@@ -36,11 +36,27 @@ class  PostsController < ApplicationController
     @post_form = PostForm.new(post: @post)
   end
 
+  def update
+    @user = current_user
+    @post = Post.find(params[:id])
+    @post_form = PostForm.new(post_update_params, post: @post)
+    tag_list = params[:post_form][:tag_name].split(",")
+    if @post_form.valid?
+      @post_form.update(tag_list)
+      redirect_to post_path(@post.id)
+    else
+      render :edit
+    end
+  end
 
   private
 
   def post_form_params
     params.require(:post_form).permit(:title, :text, :category_id, :tag_name, {images: []}).merge(user_id: current_user.id)
+  end
+
+  def post_update_params
+    params.require(:post_form).permit(:title, :text, :category_id, :tag_name, {images: []}).merge(user_id: current_user.id, post_id: params[:id])    
   end
 
 end
