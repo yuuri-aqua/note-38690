@@ -25,6 +25,12 @@ class  PostsController < ApplicationController
     end
   end
 
+  def show
+    @user = current_user
+    @post = Post.find(params[:id])
+  end
+
+
   private
 
   def post_form_params

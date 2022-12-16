@@ -1,26 +1,17 @@
-<html>
-  <head>
+<head>
   <script src="https://kit.fontawesome.com/e6214fc67b.js" crossorigin="anonymous"></script>
-  </head>
+</head>
 
-  <body>
+<body>
   <%= render "shared/header" %>
 
   <div class= 'main'>
-  <br><br>
-      <%= link_to "投稿する", new_post_path, class: "logo" %>
-
     <div class= "posts_all">
       <div class="posts">
-        <% if @posts.present? %>
-          <%= render "posts_all" %>
-        <% end %>
-
-
+        <%= render "posts_show" %>
       </div>
     </div>
   </div>
+  
   <%= render "shared/footer" %>
 </body>
-
-</html>

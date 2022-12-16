@@ -1,0 +1,69 @@
+<div class="posts-id-show">
+
+  <div class="posts-main-box">
+
+    <% if @post.title.present? %>
+    <div class="posts-title-id">
+      <p><%= @post.title %></p>
+    </div>
+    <% end %>
+    
+    <div class="posts-timestamp-id">
+      <p><%= @post.created_at %></p>
+    </div>
+
+      <div class='submenu'>
+          <div class="posts-bookmark-id">
+            <div id = "bookmark_button_<%= @post.id %>">
+              <%= render "bookmarks/bookmark", post: @post %>
+            </div>
+          </div>
+
+          <div class="mod_dropnavi ex_clearfix">
+            <ul>
+              <li class="parent">
+                <a href="javascript:void(0)">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </a>
+                <div class="mod_dropnavi_child">
+                  <ul>
+                    <li>
+                      <%= link_to '編集', '', method: :get %>
+                    </li>
+                    <li>
+                      <%= link_to '削除', '', method: :delete %>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    <div class="posts-text-id">
+      <%=safe_join(@post.text.split("\n"),tag(:br))%>
+
+      <div class="posts-image-id">
+        <% @post.images.each do |image| %>
+          <div class="posts-image-show">
+          <%= image_tag(image) %>
+          </div>
+        <% end %>
+      </div>
+      
+      <div class="posts-sub-box">
+
+        <div class="posts-category-id">
+          <p><%= @post.category.genre %></p>
+        </div>
+
+        <div class="posts-tag-id">
+          <% @post.tags.each do |tag| %>
+            <%= '#' + tag.tag_name if @post.tags.first.present? %>
+          <% end %>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
