@@ -8,8 +8,38 @@
   <div class= 'main'>
     <div class= "posts_all">
       <div class="posts">
-        <%= render "posts_show" %>
-        <%= render "posts_form_edit" %>
+        <!-- 入力フォーム有りver.(all)のCSSを適用 -->
+        <div class="posts-id-all">
+          <%= render "posts_show" %>
+        </div>
+
+        <!-- PATCHメソッドver. -->
+        <%= form_with model: @post_form, url: post_path, method: :patch, id: 'new_post', class:'form-id', local: true do |f| %>
+
+          <div class="form-input-id">
+            <%= f.text_field :title, class: 'form-title-id', placeholder: 'タイトル' %>
+            <%= f.text_area :text, class: 'form-contents-id', placeholder: '本文' %>
+            
+
+            <%= f.file_field :images, class: "image-id", multiple: true, onchange: "loadImage(this);" %>
+            <div id="post_images" style="display: none;" class="image-pre">
+            <p id="preview"></p>
+            </div>
+            <%= render "loadimage" %>
+
+            
+            <div class='category_box'>
+              <%= f.collection_select :category_id, Category.all, :id, :genre,{include_blank: "カテゴリを選択"}, {class: "category-id"} %>
+              <%= link_to "カテゴリを追加", new_category_path %>
+            </div>
+
+            <%= f.text_field :tag_name, placeholder: 'タグ追加：,半角カンマ区切りで複数可)', class: 'tag-id' %>
+          </div><br>
+          
+          <%= f.submit '送信', class: 'form-submit-id', type: 'button', onclick: 'submit();' %>
+
+        <% end %>
+
       </div>
     </div>
   </div>
