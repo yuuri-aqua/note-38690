@@ -27,9 +27,6 @@ class PostForm
 
   end
 
-
-
-
   def update(tag_list)
     ActiveRecord::Base.transaction do
       # @deli = Deli.where(id: deli_id)
@@ -50,7 +47,6 @@ class PostForm
       end
     end
   end
-
 
   private
 
