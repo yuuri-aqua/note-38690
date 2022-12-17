@@ -44,8 +44,6 @@
       </div>
     </div>
 
-    
-
     <div class="posts-text-id">
 
       <%=safe_join(post.text.split("\n"),tag(:br))%>
@@ -61,13 +59,18 @@
       <div class="posts-sub-box">
 
         <div class="posts-category-id">
-          <p><%= post.category.genre %></p>
+          <p>
+            <i class="fa-regular fa-folder"></i>
+            <%= post.category.genre %>
+          </p>
         </div>
 
 
         <div class="posts-tag-id">
           <% post.tags.each do |tag| %>
-            <%= '#' + tag.tag_name if post.tags.first.present? %>
+            <div class='posts-tag-one'>
+              <%= '#' + tag.tag_name if post.tags.first.present? %>
+            </div>
           <% end %>
         </div>
       </div>

@@ -49,17 +49,25 @@
       <% end %>
     </div>
     
-    <div class="posts-sub-box">
+     <div class="posts-sub-box">
 
-      <div class="posts-category-id">
-        <p><%= @post.category.genre %></p>
-      </div>
+        <div class="posts-category-id">
+          <p>
+            <i class="fa-regular fa-folder"></i>
+            <%= @post.category.genre %>
+          </p>
+        </div>
 
-      <div class="posts-tag-id">
-        <% @post.tags.each do |tag| %>
-          <%= '#' + tag.tag_name if @post.tags.first.present? %>
-        <% end %>
+
+        <div class="posts-tag-id">
+          <% @post.tags.each do |tag| %>
+            <div class='posts-tag-one'>
+              <%= '#' + tag.tag_name if @post.tags.first.present? %>
+            </div>
+          <% end %>
+        </div>
       </div>
+      
     </div>
     
   </div>

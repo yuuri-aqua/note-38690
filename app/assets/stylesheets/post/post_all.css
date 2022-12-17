@@ -169,5 +169,10 @@
 
 .posts-tag-id{
   color: #545f58;
+  padding: 0 15px;
+  display: flex;
 }
 
+.posts-tag-one{
+padding-right: 10px;
+}
