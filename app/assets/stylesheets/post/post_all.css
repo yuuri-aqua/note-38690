@@ -36,7 +36,7 @@
 
 
 /* ==========================================================================
- * サブメニュー：ブックマーク
+ * サブメニュー：ブックマーク／詳細／編集／削除
  * ========================================================================== */
 
 
@@ -44,89 +44,24 @@
   width: 100%;
   height: 30px;
   display: flex;
+  padding-top: 3px;
   justify-content: flex-end;
   border-top: 1px solid gray;
 }
 
-.posts-bookmark-id{
+.posts-submenu-id{
   border: none;
   padding-top: 6px;
   margin-right: 10px;
   width: 35px;
   text-align: center;
   font-size: 16px;
+  padding-bottom: 10px;
 }
 
-.posts-bookmark-id:hover   {background-color:#e7e7e7}
-.posts-bookmark-id:active  {background-color:#e7e7e7}
-
-
-/* ==========================================================================
- * サブメニュー：詳細／編集／削除
- * ========================================================================== */
-
-/* drop down
------------------------------------------*/
-/* link */
-.mod_dropnavi ul li a{
-  padding: 6px 3px 3px 3px;
-  margin-right: 50px;
-  height: 30px;
-  width: 30px;
+.posts-submenu-id:hover, .posts-submenu-id:active{
+  background-color:#e7e7e7;
 }
-
-.mod_dropnavi ul li a:link    {text-decoration:none;}
-.mod_dropnavi ul li a:visited {text-decoration:none;}
-.mod_dropnavi ul li a:hover   {text-decoration:none;}
-.mod_dropnavi ul li a:active  {text-decoration:none;}
- 
-/* mod_dropnavi */
-.mod_dropnavi>ul{
-  background-color:#ffffff;
-}
-.mod_dropnavi>ul>li{
-  width:20px;
-  text-align:center;
-}
-.mod_dropnavi>ul>li>a{
-  display:block;
-  font-weight:bold;
-  font-size: 16px;
-  text-align: center;
-  position: relative;
-  right: 10px;
-  color: #26342c;
-}
-.mod_dropnavi>ul>li>a:hover   {background-color:#e7e7e7}
-.mod_dropnavi>ul>li>a:active  {background-color:#e7e7e7}
- 
-/* mod_dropnavi_child */
-.mod_dropnavi .mod_dropnavi_child{
-  display:none;
-  position: relative;
-  right: 60px;
-}
-.mod_dropnavi .mod_dropnavi_child ul{
-  width: 80px;
-  border: 1px solid #838383;
-  background-color:#ffffff;
-}
-.mod_dropnavi .mod_dropnavi_child ul li{
-  text-align:center;
-  white-space:nowrap;
-}
-.mod_dropnavi .mod_dropnavi_child ul li a{
-  padding: 12px 0 22px 0;
-  display:block;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-}
-.mod_dropnavi .mod_dropnavi_child ul li a:link    {color:#222222; text-decoration:none;}
-.mod_dropnavi .mod_dropnavi_child ul li a:visited {color:#222222; text-decoration:none;}
-.mod_dropnavi .mod_dropnavi_child ul li a:hover   {color:#222222; background-color:#e7e7e7}
-.mod_dropnavi .mod_dropnavi_child ul li a:active  {color:#222222; background-color:#e7e7e7}
-
 
 /* ==========================================================================
  * 本文／画像
@@ -158,7 +93,7 @@
  * カテゴリー／タグ
  * ========================================================================== */
 
-.posts-sub-box{
+.posts-sub_box{
   display: flex;
 }
 
@@ -175,4 +110,41 @@
 
 .posts-tag-one{
 padding-right: 10px;
+}
+
+
+
+/* ==========================================================================
+ * ツールチップ（下に表示）
+ * ========================================================================== */
+
+.tooltip { /* 補足説明するテキストのスタイル */
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+}
+ 
+.description_bottom { /* ツールチップのスタイル */
+  width: 80px; /* 横幅 */
+  position: absolute;
+  top: 80%; /* Y軸の位置 */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px; /* テキストとの距離 */
+  padding: 8px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: #666;
+  font-size: 0.5em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+ 
+.tooltip:hover .description_bottom { /* マウスオーバー時のスタイル */
+  top: 100%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
 }
