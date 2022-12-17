@@ -35,7 +35,7 @@
                   <%= link_to '編集', edit_post_path(post.id), method: :get %>
                 </li>
                 <li>
-                  <%= link_to '削除', '', method: :delete %>
+                  <%= link_to '削除', post_path(post.id), method: :delete %>
                 </li>
               </ul>
             </div>
