@@ -2,7 +2,6 @@
   <div class="posts-main-box">
 
     <% if post.title.present? %>
-
     <!-- タイトル -->
     <div class="posts-title-id">
       <p><%= post.title %></p>
@@ -11,15 +10,19 @@
     
 
 
+
+
+
       <!-- ブックマーク -->
       <div class="posts-submenu-id">
         <div id = "bookmark_button_<%= post.id %>">
           <%= render "bookmarks/bookmark", post: post %>
         </div>
+      </div>
 
 
       
-</div>
+
      
     <div class="posts-text-id">
      <!-- 本文 -->
