@@ -1,4 +1,5 @@
 .posts-id-all{
+  width: 100%;
   margin: 10px 30px 30px 30px;
   padding: 0px;
   padding-bottom: 280px;
@@ -41,8 +42,8 @@
 
 
 .submenu{
-  width: 100%;
   height: 30px;
+  width: 100%;
   display: flex;
   padding-top: 3px;
   justify-content: flex-end;
@@ -82,7 +83,7 @@
   align-content: flex-start;
 }
 
-.posts-image-one > img {
+.posts-image-all > img {
   height: 30vh;
   width: auto;
   margin: 0 10px 0 0;
