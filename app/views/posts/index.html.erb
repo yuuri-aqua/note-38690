@@ -4,23 +4,21 @@
   </head>
 
   <body>
-  <%= render "shared/header" %>
+    <%= render "shared/header" %>
 
-  <div class= 'main'>
-    <br><br>
-    <%= link_to "投稿する", new_post_path, class: "logo" %>
-
-    <div class= "posts_all">
-      <div class="posts">
-        <% if @posts.present? %>
-          <!-- 入力フォーム無しver.(show)のCSSを適用 -->
-          <%= render "posts_all" %>
-        <% end %>
+    <div class= 'main'>
+      <div class= "posts_all">
+        <div class="posts">
+          <div class="posts-id-all">
+            <% if @posts.present? %>
+              <%= render "posts_all_index" %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-
-  </div>
-  <%= render "shared/footer" %>
-</body>
+    
+    <%= render "shared/footer" %>
+  </body>
 
 </html>

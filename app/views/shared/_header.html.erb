@@ -6,6 +6,9 @@
       <%= link_to "Note To Self +", root_path, class: "logo" %>
     <% end %>
 
+      <%= link_to "投稿する", new_post_path, class: "logo" %>
+
+      
     <ul class='lists-right'>
       <% if user_signed_in? %>
       <li><%= link_to current_user.nickname, posts_path, class: "user-nickname" %></li>
