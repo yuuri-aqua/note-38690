@@ -18,13 +18,11 @@ class PostForm
   end
 
   def save(tag_list)
-
     post = Post.create(title: title, text: text, images: images, user_id: user_id, category_id: category_id)
     tag_list.each do |new_tag|
       post_tag = Tag.find_or_create_by(tag_name: new_tag)
       post.tags << post_tag
     end
-
   end
 
   def update(tag_list)
@@ -41,7 +39,7 @@ class PostForm
 
       new_tags.each do |new_name|
         post_tag = Tag.find_or_create_by(tag_name: new_name)
-        @post.tags << post_tag 
+        @post.tags << post_tag
         post_tag_relation = PostTagRelation.where(post_id: @post.id, tag_id: post_tag.id).first_or_initialize
         post_tag_relation.update(post_id: @post.id, tag_id: post_tag.id)
       end

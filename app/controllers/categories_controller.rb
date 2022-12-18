@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def new
     @categories = Category.all
     @category = Category.new
@@ -19,5 +18,4 @@ class CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:genre)
   end
-
 end
