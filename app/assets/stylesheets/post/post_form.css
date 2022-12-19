@@ -1,14 +1,3 @@
-.posts_all {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: none;
-}
-
-.posts {
-  flex: 1 auto;
-}
 
 .post-title {
   color: #434a54;

@@ -1,0 +1,180 @@
+<div class="posts-all">
+  <div class="posts-index_all">
+    <% @posts.each do |post| %>
+      <div class="posts-main-box">
+        <% if post.images.present? && post.title.present? %>  
+          <!---- 表示１：画像あり／タイトルあり ---->
+          <div class="posts_index_box_image1">
+            <div class="posts_index_box_image1_main">
+              <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+
+                <!-- 画像 -->
+                <div class="posts-index_image1">
+
+                  <% if post.images.count > 0 %>
+                    <%= image_tag post.images.first.variant(gravity: :center, resize:"200x220^", crop:"200x220+0+0").processed %>
+                  <% end %>
+      
+                  <!-- 本文 -->
+                  <div class="posts-index_text1">
+                    <%= post.text.truncate(101) %>
+                  </div>
+                </div>
+
+                <!-- タイトル -->
+                <div class="posts-index_title1">
+                  <%= post.title.truncate(14) %>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="posts-index_sub">
+              <!-- カテゴリー -->
+              <div class="posts-index_category">
+                <p>
+                  <i class="fa-regular fa-folder" style="color: #888888"></i>
+                  <span class="category_size"><%= post.category.genre %></span>
+                </p>
+              </div>
+          
+              <!-- ブックマーク -->
+              <div class="posts-index_bookmark">
+                <div id = "bookmark_button_<%= post.id %>">
+                  <span class="tooltip">
+                  <%= render "bookmarks/bookmark", post: post %>
+                  <span class="description_bottom">ブックマーク</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <% elsif post.images.present? %>  
+          <!---- 表示２：画像あり／タイトルなし ---->
+          <div class="posts_index_box_image2">
+
+            <div class="posts_index_box_image2_main">
+              <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+                <!-- 画像 -->
+                <div class="posts-index_image2">
+                  <% if post.images.count > 0 %>
+                    <%= image_tag post.images.first.variant(gravity: :center, resize:"200x250^", crop:"200x250+0+0").processed %>
+                  <% end %>
+              
+                  <!-- 本文 -->
+                  <div class="posts-index_text2">
+                    <%= post.text.truncate(101) %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="posts-index_sub">
+              <!-- カテゴリー -->
+              <div class="posts-index_category">
+                <p>
+                  <i class="fa-regular fa-folder" style="color: #888888"></i>
+                  <span class="category_size"><%= post.category.genre %></span>
+                </p>
+              </div>
+          
+              <!-- ブックマーク -->
+              <div class="posts-index_bookmark">
+                <div id = "bookmark_button_<%= post.id %>">
+                  <span class="tooltip">
+                  <%= render "bookmarks/bookmark", post: post %>
+                  <span class="description_bottom">ブックマーク</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <% else %>
+          <% if post.title.present? %>  
+            <!---- 表示３：本文のみ／タイトルあり ---->
+            <div class="posts_index_box_text3">
+              <div class="posts_index_box_text3_main">
+                <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+
+                  <!-- タイトル -->
+                  <div class="posts-index_title3">
+                    <%= post.title.truncate(14) %>
+                  </div>
+
+                  <!-- 本文 -->
+                  <div class="posts-index_text3">
+                    <%= post.text.truncate(198) %>
+                      <div class="posts-index_text3_h">
+                        read more ...
+                      </div>
+                  </div>
+
+                <% end %>
+              </div>
+
+              <div class="posts-index_sub">
+                <!-- カテゴリー -->
+                <div class="posts-index_category">
+                  <p>
+                    <i class="fa-regular fa-folder" style="color: #888888"></i>
+                    <span class="category_size"><%= post.category.genre %></span>
+                  </p>
+                </div>
+            
+                <!-- ブックマーク -->
+                <div class="posts-index_bookmark">
+                  <div id = "bookmark_button_<%= post.id %>">
+                    <span class="tooltip">
+                    <%= render "bookmarks/bookmark", post: post %>
+                    <span class="description_bottom">ブックマーク</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% else %>
+          <!---- 表示４：本文のみ／タイトルなし ---->
+            <div class="posts_index_box_text4">
+              <div class="posts_index_box_text4_main">
+                <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+
+                  <!-- 本文 -->
+                  <div class="posts-index_text4">
+                    <%= post.text.truncate(260) %>
+                      <div class="posts-index_text4_h">
+                        read more ...
+                      </div>
+                  </div>
+
+                <% end %>
+              </div>
+
+              <div class="posts-index_sub">
+                <!-- カテゴリー -->
+                <div class="posts-index_category">
+                  <p>
+                    <i class="fa-regular fa-folder" style="color: #888888"></i>
+                    <span class="category_size"><%= post.category.genre %></span>
+                  </p>
+                </div>
+            
+                <!-- ブックマーク -->
+                <div class="posts-index_bookmark">
+                  <div id = "bookmark_button_<%= post.id %>">
+                    <span class="tooltip">
+                    <%= render "bookmarks/bookmark", post: post %>
+                    <span class="description_bottom">ブックマーク</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+        <div class="cell"></div>
+           <div class="cell"></div>
+  </div>
+</div>

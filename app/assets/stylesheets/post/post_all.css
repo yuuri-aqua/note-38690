@@ -1,14 +1,36 @@
+body {
+  height: 100%;
+  color: #222222;
+}
+
+
+.posts-all{
+  width: 100%;
+  height: 100%;
+  padding: 120px 30px;
+}
+
+.posts-all_form{
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px 250px;
+}
+
+
 .posts-id-all{
-
-  margin: 10px 30px 30px 30px;
-  padding: 0px;
-  padding-bottom: 280px;
+  width: 100%;
+  height: 100%;
 }
 
-.posts-main-box {
-  padding: 20px 0;
+.posts-show-box{
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px 0px;
 }
 
+.post-id-show{
+  padding: 100px 10px 0px;
+}
 
 /* ==========================================================================
  * タイトル／日時
@@ -46,6 +68,7 @@
   width: 100%;
   display: flex;
   padding-top: 3px;
+  margin-bottom: 10px;
   justify-content: flex-end;
   border-top: 1px solid gray;
 }
@@ -62,6 +85,7 @@
 
 .posts-submenu-id:hover, .posts-submenu-id:active{
   background-color:#e7e7e7;
+  border-radius: 50%;
 }
 
 /* ==========================================================================
@@ -89,6 +113,10 @@
   margin: 0 10px 0 0;
 }
 
+.posts-image-one > img{
+  max-width: 100%;
+  margin: 0 20px 10px 0;
+}
 
 /* ==========================================================================
  * カテゴリー／タグ
@@ -140,7 +168,7 @@ padding-right: 10px;
   text-align: center;
   visibility: hidden; /* ツールチップを非表示に */
   opacity: 0; /* 不透明度を0％に */
-  z-index: 1;
+
   transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
 }
  
