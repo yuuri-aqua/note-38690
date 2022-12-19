@@ -6,19 +6,10 @@
   <body>
     <%= render "shared/header" %>
 
-    <div class= 'main'>
-      <div class= "posts_all">
-        <div class="posts">
-          <div class="posts-id-all">
-            <% if @posts.present? %>
-              <%= render "posts_all_index" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+    <% if @posts.present? %>
+      <%= render "posts_index" %>
+    <% end %>
+
     <%= render "shared/footer" %>
   </body>
-
 </html>

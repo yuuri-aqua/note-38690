@@ -1,0 +1,274 @@
+
+.posts-index_all{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5px 50px;
+}
+
+.posts-main-box{
+
+}
+
+.cell {
+  width: 245px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.posts-index_sub{
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 6px 0;
+  font-size: 16px;
+}
+
+
+.posts-index_category{
+  width: 190px;
+}
+
+.posts-index_category span {
+font-size: 0.8em;
+text-decoration: none;
+color: cadetblue;
+}
+
+
+.posts-index_bookmark{
+  border: none;
+  width: 35px;
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.post-indexs_link{
+  text-decoration: none;
+  color: #222222;
+}
+
+
+/* ==========================================================================
+ * 表示１：画像あり、タイトルあり
+ * ========================================================================== */
+
+ .posts_index_box_image1{
+  width: 224px;
+  height: 280px;
+  margin: 0 10px 60px;
+}
+
+
+.posts_index_box_image1_main{
+  border: 1px solid #cccccc;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.posts-index_image1{
+  width: 200px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.posts-index_text1{
+  width: 200px;
+  height: 220px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  color: #cccccc;
+  padding: 20px;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts-index_image1:hover .posts-index_text1 {
+  opacity: 1;
+  transition:all 0.6s ease;
+}
+
+.posts-index_title1{
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2px;
+
+}
+
+
+
+/* ==========================================================================
+ * 表示２：画像あり、タイトルなし
+ * ========================================================================== */
+
+ .posts_index_box_image2{
+  width: 224px;
+  height: 280px;
+  margin: 0 10px 60px;
+}
+
+.posts_index_box_image2_main{
+  border: 1px solid #cccccc;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.posts-index_image2{
+  width: 200px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.posts-index_text2{
+  width: 200px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  color: #cccccc;
+  padding: 20px;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts-index_image2:hover .posts-index_text2 {
+  opacity: 1;
+  transition:all 0.6s ease;
+}
+
+/* ==========================================================================
+ * 表示3：本文のみ（画像なし）、タイトルあり
+ * ========================================================================== */
+
+ .posts_index_box_text3{
+  width: 224px;
+  height: 280px;
+  margin: 0 10px 60px;
+}
+
+
+.posts_index_box_text3_main{
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  background-image: image-url('background01.png');
+}
+
+
+.posts-index_title3{
+  border-radius: 9px 9px 0 0;
+  height: 50px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.posts-index_text3{
+  width: 222px;
+  height: 224px;
+  padding: 20px 10px;
+  position: relative;
+}
+
+.posts-index_text3_h{
+  width: 222px;
+  height: 224px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  color: #cccccc;
+  padding: 20px;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 9px 9px;
+}
+
+.posts-index_text3:hover .posts-index_text3_h {
+  opacity: 1;
+  transition:all 0.6s ease;
+}
+
+/* ==========================================================================
+ * 表示４：本文のみ（画像なし）、タイトルなし
+ * ========================================================================== */
+
+ .posts_index_box_text4{
+  width: 224px;
+  height: 280px;
+  margin: 0 10px 60px;
+}
+
+
+.posts_index_box_text4_main{
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  background-image: image-url('background01.png');
+}
+
+
+.posts-index_text4{
+  width: 222px;
+  height: 273px;
+  padding: 20px 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts-index_text4_h{
+  width: 222px;
+  height: 273px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  color: #cccccc;
+  padding: 20px;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:9px;
+}
+
+.posts-index_text4:hover .posts-index_text4_h {
+  opacity: 1;
+  transition:all 0.6s ease;
+}
