@@ -1,13 +1,22 @@
+$color-accent1: #342520;
+$color-accent2: #1a3328;
+$color-accent3: #80791d;
+$color-accent4: #b1ab9f;
+
 body {
   height: 100%;
-  color: #222222;
+  color: $color-accent3;
+  font-family: "Sawarabi Gothic";
+  line-height: 1.5em;
 }
-
 
 .posts-all{
   width: 100%;
   height: 100%;
-  padding: 120px 30px;
+  padding: 130px 50px 100px;
+  background-color:$color-accent1;
+  font-family: "Sawarabi Gothic";
+  line-height: 1.5em;
 }
 
 .posts-all_form{
@@ -22,10 +31,17 @@ body {
   height: 100%;
 }
 
+.posts-all-box_one{
+  background-image: image-url('background01.png');
+  margin-bottom: 30px ;
+  padding: 20px;
+}
+
 .posts-show-box{
   width: 100%;
   height: 100%;
-  padding: 0px 0px 0px;
+  padding: 20px;
+  background-image: image-url('background01.png');
 }
 
 .post-id-show{
@@ -42,7 +58,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: rgb(30, 62, 38);
-  border-left: 10px solid #54aa75;
+  border-left: 10px solid $color-accent2;
   padding: 7px 5px;
   margin: 0;
 }
@@ -52,7 +68,7 @@ body {
   width: 100%;
   font-size: 10px;
   color: #545f58;
-  border-left: 10px solid #26342c;
+  border-left: 10px solid $color-accent2;
   padding: 2px 5px;
   margin: 0;
 }
@@ -67,10 +83,10 @@ body {
   height: 30px;
   width: 100%;
   display: flex;
-  padding-top: 3px;
+  padding-top: 5px;
   margin-bottom: 10px;
   justify-content: flex-end;
-  border-top: 1px solid gray;
+  border-top: 1px solid $color-accent1;
 }
 
 .posts-submenu-id{
@@ -83,11 +99,6 @@ body {
   padding-bottom: 10px;
 }
 
-.posts-submenu-id:hover, .posts-submenu-id:active{
-  background-color:#e7e7e7;
-  border-radius: 50%;
-}
-
 /* ==========================================================================
  * 本文／画像
  * ========================================================================== */
@@ -96,7 +107,7 @@ body {
   width : 100%;
   padding: 0 15px 10px 15px;
   line-height: 1.5;
-  border-bottom: 1px solid gray;
+  border-bottom: 3px solid #342520;
 }
 
 .posts-image-id {
@@ -138,9 +149,8 @@ body {
 }
 
 .posts-tag-one{
-padding-right: 10px;
+  padding-right: 10px;
 }
-
 
 
 /* ==========================================================================
@@ -155,19 +165,21 @@ padding-right: 10px;
  
 .description_bottom { /* ツールチップのスタイル */
   width: 80px; /* 横幅 */
+  height: 28px;
   position: absolute;
   top: 80%; /* Y軸の位置 */
   left: 50%;
   transform: translateX(-50%);
   margin-top: 8px; /* テキストとの距離 */
-  padding: 8px;
+  padding: 3px;
   border-radius: 10px; /* 角の丸み */
-  background-color: #666;
+  background-color: $color-accent2;
   font-size: 0.5em;
-  color: #fff;
+  color: $color-accent4;
   text-align: center;
   visibility: hidden; /* ツールチップを非表示に */
   opacity: 0; /* 不透明度を0％に */
+  font-size: 11px;
 
   transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
 }

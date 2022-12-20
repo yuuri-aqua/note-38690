@@ -2,7 +2,7 @@
   <div class="posts-id-all">
 
     <% @posts.each do |post| %>
-      <div class="posts-main-box">
+      <div class="posts-all-box_one">
 
         <% if post.title.present? %>
 
@@ -18,35 +18,45 @@
         </div>
 
         <div class='submenu'>
-          <!-- ブックマーク -->
-          <div class="posts-submenu-id">
-            <div id = "bookmark_button_<%= post.id %>">
+        <!-- ブックマーク -->
+        <div class="posts-submenu-id">
+          <div id = "bookmark_button_<%= post.id %>">
+            <span class="tooltip">
               <%= render "bookmarks/bookmark", post: post %>
-            </div>
-          </div>
-
-          <!-- 編集 -->
-          <div class="posts-submenu-id">
-            <%= link_to post_path(post.id), method: :get, class: 'btn btn-default' do %>
-              <i class="fa-regular fa-file-lines", style="color : #26342c"></i>
-            <% end %>
-          </div>
-
-          <!-- 削除 -->
-          <div class="posts-submenu-id">
-            <%= link_to post_path(post.id), method: :delete, class: 'btn btn-default' do  %>
-              <i class="fa-solid fa-trash", style="color : #26342c"></i>
-            <% end %>
-          </div>
-
-          <!-- 詳細表示 -->
-          <div class="posts-submenu-id">
-            <%= link_to edit_post_path(post.id), method: :get, class: 'btn btn-default' do  %>
-              <i class="fa-solid fa-pen-to-square", style="color : #26342c"></i>
-            <% end %>
+            <span class="description_bottom">ブックマーク</span></span>
           </div>
         </div>
+
+        <!-- 詳細表示 -->
+        <div class="posts-submenu-id">
+          <%= link_to post_path(post.id), method: :get, class: 'btn btn-default' do %>
+            <span class="tooltip">
+              <i class="fa-regular fa-file-lines", style="color : #342520"></i>
+            <span class="description_bottom">詳細</span></span>
+          <% end %>
+        </div>
+
+        <!-- 削除 -->
+        <div class="posts-submenu-id">
+          <%= link_to post_path(post.id), method: :delete, class: 'btn btn-default', data: {confirm: "削除しますか？"} do  %>
+            <span class="tooltip">
+              <i class="fa-solid fa-trash", style="color : #342520"></i>
+            <span class="description_bottom">削除</span></span>
+          <% end %>
+        </div>
+
+        <!-- 編集 -->
+        <div class="posts-submenu-id">
+          <%= link_to edit_post_path(post.id), method: :get, class: 'btn btn-default' do  %>
+            <span class="tooltip">
+              <i class="fa-solid fa-pen-to-square", style="color : #342520"></i>
+            <span class="description_bottom">編集</span></span>
+          <% end %>
+        </div>
+      </div>
         
+
+
         <div class="posts-text-id">
         <!-- 本文 -->
           <%=safe_join(post.text.split("\n"),tag(:br))%>

@@ -1,3 +1,7 @@
+$color-accent1: #342520;
+$color-accent2: #1a3328;
+$color-accent3: #80791d;
+$color-accent4: #b1ab9f;
 
 .posts-index_all{
   width: 100%;
@@ -5,43 +9,32 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 5px 50px;
+  padding: 50px 30px;
+  background-image: image-url('background01.png');
 }
 
-.posts-main-box{
-
-}
-
-.cell {
-  width: 245px;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
 .posts-index_sub{
   display: flex;
   justify-content: flex-start;
-  padding: 8px 6px 0;
+  padding: 6px 18px 0;
   font-size: 16px;
 }
 
 
 .posts-index_category{
-  width: 190px;
+  width: 280px;
 }
 
 .posts-index_category span {
-font-size: 0.8em;
-text-decoration: none;
-color: cadetblue;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: $color-accent1;
 }
 
 
 .posts-index_bookmark{
   border: none;
-  width: 35px;
   text-align: center;
   font-size: 16px;
   padding-bottom: 10px;
@@ -52,35 +45,51 @@ color: cadetblue;
   color: #222222;
 }
 
+.empty{
+  width: 280px;
+  margin: 0 15px 0;
+}
+
 
 /* ==========================================================================
  * 表示１：画像あり、タイトルあり
  * ========================================================================== */
 
  .posts_index_box_image1{
-  width: 224px;
-  height: 280px;
-  margin: 0 10px 60px;
+  width: 280px;
+  height: 320px;
+  margin: 0 15px 30px;
+  padding: 0 0 30px;
 }
 
+.posts_index_box_image1_out{
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  padding-top: 7px;
+  background-color: $color-accent2;
+
+}
 
 .posts_index_box_image1_main{
-  border: 1px solid #cccccc;
-  padding: 12px;
-  border-radius: 10px;
+  width: 240px;
+  height: 240px;
+  margin: 13px auto 0;
+  padding-top: 8px;
+  border: 1px solid $color-accent3;
 }
 
 .posts-index_image1{
   width: 200px;
-  height: 220px;
+  height: 180px;
   position: relative;
   overflow: hidden;
-
+  margin: 5px 20px 14px;
 }
 
 .posts-index_text1{
   width: 200px;
-  height: 220px;
+  height: 180px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -88,7 +97,7 @@ color: cadetblue;
   right: 0;
   background: rgba(0,0,0,0.7);
   opacity: 0;
-  color: #cccccc;
+  color: $color-accent4;
   padding: 20px;
   line-height: 1.5em;
   display: flex;
@@ -102,14 +111,13 @@ color: cadetblue;
 }
 
 .posts-index_title1{
-  width: 200px;
-  height: 30px;
+  width: 238px;
+  height: 40px;
   text-align: center;
   font-size: 14px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 2px;
+  color: $color-accent4;
+  border-top: 5px solid $color-accent3;
+  padding-top: 3px;
 
 }
 
@@ -120,36 +128,48 @@ color: cadetblue;
  * ========================================================================== */
 
  .posts_index_box_image2{
-  width: 224px;
-  height: 280px;
-  margin: 0 10px 60px;
+  width: 280px;
+  height: 320px;
+  margin: 0 15px 30px;
 }
 
 .posts_index_box_image2_main{
-  border: 1px solid #cccccc;
-  padding: 12px;
+  padding: 20px;
   border-radius: 10px;
+  border: 1px solid $color-accent2;
+  background-color: $color-accent2;
 }
 
+
 .posts-index_image2{
-  width: 200px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   position: relative;
-  overflow: hidden;
+}
+
+.posts-index_image2_in{
+  width: 220px;
+  height: 220px;
+  border: 3px solid $color-accent3;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
 }
 
 .posts-index_text2{
-  width: 200px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   position: absolute;
-  top: 0;
+  top: -13px;
   bottom: 0;
-  left: 0;
+  left: -13px;
   right: 0;
   background: rgba(0,0,0,0.7);
   opacity: 0;
-  color: #cccccc;
-  padding: 20px;
+  color: $color-accent4;
+  padding: 0 20px 5px 30px;
   line-height: 1.5em;
   display: flex;
   align-items: center;
@@ -161,21 +181,24 @@ color: cadetblue;
   transition:all 0.6s ease;
 }
 
+
+
+
 /* ==========================================================================
  * 表示3：本文のみ（画像なし）、タイトルあり
  * ========================================================================== */
 
  .posts_index_box_text3{
-  width: 224px;
-  height: 280px;
-  margin: 0 10px 60px;
+  width: 280px;
+  height: 320px;
+  margin: 0 15px 30px;
 }
 
 
 .posts_index_box_text3_main{
-  border: 1px solid #cccccc;
+  border: 1px solid $color-accent2;
   border-radius: 10px;
-  background-image: image-url('background01.png');
+  background-color: $color-accent2;
 }
 
 
@@ -187,19 +210,19 @@ color: cadetblue;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
 }
 
 .posts-index_text3{
-  width: 222px;
-  height: 224px;
+  width: 278px;
+  height: 228px;
+  margin: 0 auto;
   padding: 20px 10px;
   position: relative;
 }
 
 .posts-index_text3_h{
-  width: 222px;
-  height: 224px;
+  width: 242px;
+  height: 244px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -207,9 +230,9 @@ color: cadetblue;
   right: 0;
   background: rgba(0,0,0,0.7);
   opacity: 0;
-  color: #cccccc;
+  color: $color-accent4;
   padding: 20px;
-  line-height: 1.5em;
+  line-height: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,21 +249,20 @@ color: cadetblue;
  * ========================================================================== */
 
  .posts_index_box_text4{
-  width: 224px;
-  height: 280px;
-  margin: 0 10px 60px;
+  width: 280px;
+  height: 320px;
+  margin: 0 15px 30px;
 }
 
 
 .posts_index_box_text4_main{
-  border: 1px solid #cccccc;
+  border: 1px solid $color-accent2;
   border-radius: 10px;
-  background-image: image-url('background01.png');
 }
 
 
 .posts-index_text4{
-  width: 222px;
+  width: 242px;
   height: 273px;
   padding: 20px 10px;
   position: relative;
@@ -250,7 +272,7 @@ color: cadetblue;
 }
 
 .posts-index_text4_h{
-  width: 222px;
+  width: 242px;
   height: 273px;
   position: absolute;
   top: 0;
@@ -259,7 +281,7 @@ color: cadetblue;
   right: 0;
   background: rgba(0,0,0,0.7);
   opacity: 0;
-  color: #cccccc;
+  color: $color-accent4;
   padding: 20px;
   line-height: 1.5em;
   display: flex;
@@ -271,4 +293,41 @@ color: cadetblue;
 .posts-index_text4:hover .posts-index_text4_h {
   opacity: 1;
   transition:all 0.6s ease;
+}
+
+/* ==========================================================================
+ * ツールチップ（下に表示）
+ * ========================================================================== */
+
+ .tooltip_i { /* 補足説明するテキストのスタイル */
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+}
+ 
+.description_bottom_i { /* ツールチップのスタイル */
+  width: 80px; /* 横幅 */
+  height: 28px;
+  position: absolute;
+  top: 100%; /* Y軸の位置 */
+  left: 60%;
+  transform: translateX(-50%);
+  margin-top: -5px; /* テキストとの距離 */
+  padding: 3px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: $color-accent2;
+  font-size: 0.5em;
+  color: $color-accent4;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  font-size: 11px;
+
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+ 
+.tooltip_i:hover .description_bottom_i { /* マウスオーバー時のスタイル */
+  top: 100%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
 }

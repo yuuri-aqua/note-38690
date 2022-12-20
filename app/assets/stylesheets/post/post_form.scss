@@ -1,0 +1,180 @@
+$color-accent1: #342520;
+$color-accent2: #1a3328;
+$color-accent3: #80791d;
+$color-accent4: #b1ab9f;
+
+
+.form-id {
+  background-color: $color-accent2;
+  width: 100%;
+  padding: 20px 56px 25px;
+  position: fixed;
+  bottom: 30px;
+  border-top: solid 10px $color-accent1;
+}
+
+.form-box{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.form-box_other{
+  display: flex;
+  align-items: flex-end;
+}
+
+.form-input-id {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ==========================================================================
+ * 本文
+ * ========================================================================== */
+
+.form-contents-id {
+  outline: 0;
+  min-height: 80px;
+  width: 100%;
+  padding-left: 10px;
+  margin: 0 0 10px 0;
+  font-weight: lighter;
+  resize: vertical;
+  background-image: image-url('background01.png');
+  border: none;
+}
+
+/* ==========================================================================
+ * カテゴリー
+ * ========================================================================== */
+
+.category-box{
+  display: flex;
+align-items: center;
+}
+
+.category-box a{
+  text-decoration: none;
+  color: $color-accent3;
+}
+
+.category-id{
+  color: #222222;
+  width: 135px;
+  height: 30px;
+  padding-left: 10px;
+  margin: 0 0 15px 0;
+  background-color: $color-accent3;
+  border-radius: 10px;
+  border: none;
+}
+
+.category-id:hover {
+  opacity: 0.3;
+  background: $color-accent4;
+  transition:all 0.2s ease;
+}
+
+.category-box_plus{
+  margin-left: 15px ;
+  height: 30px;
+}
+
+
+/* ==========================================================================
+ * 画像
+ * ========================================================================== */
+
+.hidden{
+  display: none;
+}
+
+.image-label-id{
+  color: $color-accent1;
+  width: 135px;
+  height: 30px;
+  margin: 0 0 15px 0;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #cccccc;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+}
+
+.image-label-id:hover {
+  opacity: 0.3;
+  background: $color-accent4;
+  transition:all 0.2s ease;
+}
+
+
+.image-pre > p{
+  height: 100px;
+  width: auto;
+  display: flex;
+}
+
+.image-pre > p > img{
+  width: auto;
+  max-height: 100%;
+  margin: 0 0 15px 25px ;
+}
+
+
+/* ==========================================================================
+ * タイトル
+ * ========================================================================== */
+
+ .form-title-id {
+  outline: 0;
+  background-color: #cccccc;
+  height: 30px;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding-left: 10px;
+  border: none;
+}
+
+/* ==========================================================================
+ * タグ
+ * ========================================================================== */
+
+.tag-id{
+  background-color: #cccccc;
+  height: 30px;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding-left: 10px;
+  margin: 0 0 10px;
+  border: none;
+}
+
+/* ==========================================================================
+ * 送信ボタン
+ * ========================================================================== */
+
+ .submit-label-id {
+  background-color: $color-accent3;
+  border: none;
+  font-size: 14px;
+  width: 100px;
+  height: 70px;
+  border-radius: 20px;
+  margin: 0 0 10px 20px;
+  color: $color-accent1;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 8px 0 0;
+}
+
+.submit-label-id:hover {
+  opacity: 0.3;
+  background: $color-accent4;
+  transition:all 0.2s ease;
+}
+
+

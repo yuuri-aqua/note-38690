@@ -5,34 +5,36 @@
         <% if post.images.present? && post.title.present? %>  
           <!---- 表示１：画像あり／タイトルあり ---->
           <div class="posts_index_box_image1">
-            <div class="posts_index_box_image1_main">
-              <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+            <div class="posts_index_box_image1_out">
+              <div class="posts_index_box_image1_main">
+                <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
 
-                <!-- 画像 -->
-                <div class="posts-index_image1">
+                  <!-- 画像 -->
+                  <div class="posts-index_image1">
 
-                  <% if post.images.count > 0 %>
-                    <%= image_tag post.images.first.variant(gravity: :center, resize:"200x220^", crop:"200x220+0+0").processed %>
-                  <% end %>
-      
-                  <!-- 本文 -->
-                  <div class="posts-index_text1">
-                    <%= post.text.truncate(101) %>
+                    <% if post.images.count > 0 %>
+                      <%= image_tag post.images.first.variant(gravity: :center, resize:"200x180^", crop:"200x180+0+0").processed %>
+                    <% end %>
+        
+                    <!-- 本文 -->
+                    <div class="posts-index_text1">
+                      <%= post.text.truncate(101) %>
+                    </div>
                   </div>
-                </div>
 
-                <!-- タイトル -->
-                <div class="posts-index_title1">
-                  <%= post.title.truncate(14) %>
-                </div>
-              <% end %>
+                  <!-- タイトル -->
+                  <div class="posts-index_title1">
+                    <%= post.title.truncate(14) %>
+                  </div>
+                <% end %>
+              </div>
             </div>
 
             <div class="posts-index_sub">
               <!-- カテゴリー -->
               <div class="posts-index_category">
                 <p>
-                  <i class="fa-regular fa-folder" style="color: #888888"></i>
+                  <i class="fa-regular fa-folder" style="color: #342520"></i>
                   <span class="category_size"><%= post.category.genre %></span>
                 </p>
               </div>
@@ -40,49 +42,54 @@
               <!-- ブックマーク -->
               <div class="posts-index_bookmark">
                 <div id = "bookmark_button_<%= post.id %>">
-                  <span class="tooltip">
+                  <span class="tooltip_i">
                   <%= render "bookmarks/bookmark", post: post %>
-                  <span class="description_bottom">ブックマーク</span></span>
+                  <span class="description_bottom_i">ブックマーク</span></span>
                 </div>
               </div>
             </div>
+
           </div>
 
         <% elsif post.images.present? %>  
           <!---- 表示２：画像あり／タイトルなし ---->
           <div class="posts_index_box_image2">
-
-            <div class="posts_index_box_image2_main">
-              <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
-                <!-- 画像 -->
-                <div class="posts-index_image2">
-                  <% if post.images.count > 0 %>
-                    <%= image_tag post.images.first.variant(gravity: :center, resize:"200x250^", crop:"200x250+0+0").processed %>
-                  <% end %>
-              
-                  <!-- 本文 -->
-                  <div class="posts-index_text2">
-                    <%= post.text.truncate(101) %>
+            <div class="posts_index_box_image2_out">
+              <div class="posts_index_box_image2_main">
+                <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+                  <!-- 画像 -->
+                  <div class="posts-index_image2">
+                 
+                    <% if post.images.count > 0 %>
+                      <%= image_tag post.images.first.variant(gravity: :center, resize:"240x240^", crop:"240x240+0+0").processed %>
+                    <% end %>
+                    <div class="posts-index_image2_in">
+                      <!-- 本文 -->
+                      <div class="posts-index_text2">
+                        <%= post.text.truncate(101) %>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              <% end %>
-            </div>
-
-            <div class="posts-index_sub">
-              <!-- カテゴリー -->
-              <div class="posts-index_category">
-                <p>
-                  <i class="fa-regular fa-folder" style="color: #888888"></i>
-                  <span class="category_size"><%= post.category.genre %></span>
-                </p>
+                <% end %>
               </div>
-          
-              <!-- ブックマーク -->
-              <div class="posts-index_bookmark">
-                <div id = "bookmark_button_<%= post.id %>">
-                  <span class="tooltip">
-                  <%= render "bookmarks/bookmark", post: post %>
-                  <span class="description_bottom">ブックマーク</span></span>
+
+
+              <div class="posts-index_sub">
+                <!-- カテゴリー -->
+                <div class="posts-index_category">
+                  <p>
+                    <i class="fa-regular fa-folder" style="color: #342520"></i>
+                    <span class="category_size"><%= post.category.genre %></span>
+                  </p>
+                </div>
+            
+                <!-- ブックマーク -->
+                <div class="posts-index_bookmark">
+                  <div id = "bookmark_button_<%= post.id %>">
+                    <span class="tooltip_i">
+                    <%= render "bookmarks/bookmark", post: post %>
+                    <span class="description_bottom_i">ブックマーク</span></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,7 +122,7 @@
                 <!-- カテゴリー -->
                 <div class="posts-index_category">
                   <p>
-                    <i class="fa-regular fa-folder" style="color: #888888"></i>
+                    <i class="fa-regular fa-folder" style="color: #342520"></i>
                     <span class="category_size"><%= post.category.genre %></span>
                   </p>
                 </div>
@@ -123,9 +130,9 @@
                 <!-- ブックマーク -->
                 <div class="posts-index_bookmark">
                   <div id = "bookmark_button_<%= post.id %>">
-                    <span class="tooltip">
+                    <span class="tooltip_i">
                     <%= render "bookmarks/bookmark", post: post %>
-                    <span class="description_bottom">ブックマーク</span></span>
+                    <span class="description_bottom_i">ブックマーク</span></span>
                   </div>
                 </div>
               </div>
@@ -151,7 +158,7 @@
                 <!-- カテゴリー -->
                 <div class="posts-index_category">
                   <p>
-                    <i class="fa-regular fa-folder" style="color: #888888"></i>
+                    <i class="fa-regular fa-folder" style="color: #342520"></i>
                     <span class="category_size"><%= post.category.genre %></span>
                   </p>
                 </div>
@@ -159,9 +166,9 @@
                 <!-- ブックマーク -->
                 <div class="posts-index_bookmark">
                   <div id = "bookmark_button_<%= post.id %>">
-                    <span class="tooltip">
+                    <span class="tooltip_i">
                     <%= render "bookmarks/bookmark", post: post %>
-                    <span class="description_bottom">ブックマーク</span></span>
+                    <span class="description_bottom_i">ブックマーク</span></span>
                   </div>
                 </div>
               </div>
@@ -170,11 +177,8 @@
         <% end %>
       </div>
     <% end %>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-        <div class="cell"></div>
-           <div class="cell"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
   </div>
 </div>
