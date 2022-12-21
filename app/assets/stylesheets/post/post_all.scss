@@ -16,7 +16,9 @@ body {
 
 .wrapper{
   margin: 0 auto;
-  background-image: image-url('background01.png');
+  background-image: image-url('background_02.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container{
@@ -47,7 +49,7 @@ body {
 }
 
 .posts-all-box_one{
-  background-image: image-url('background01.png');
+  background-image: image-url('background_01.jpg');
   margin-bottom: 30px ;
   padding: 20px;
 }
@@ -56,7 +58,8 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background-image: image-url('background01.png');
+  background-image: image-url('background_01.jpg');
+  color: $color-accent1;
 }
 
 .post-id-show{
@@ -98,7 +101,7 @@ body {
   height: 30px;
   width: 100%;
   display: flex;
-  padding-top: 5px;
+  padding-top: 3px;
   margin-bottom: 10px;
   justify-content: flex-end;
   border-top: 1px solid $color-accent2;
@@ -120,9 +123,10 @@ body {
 
 .posts-text-id {
   width : 100%;
-  padding: 0 15px 10px 15px;
-  line-height: 1.5;
+  padding: 10px 15px 10px 15px;
+  line-height: 1.4;
   border-bottom: 3px solid $color-accent2;
+  color: $color-accent1;
 }
 
 .posts-image-id {
@@ -155,13 +159,13 @@ body {
 }
 
 .posts-category-id {
-  color: #545f58;
+  color: $color-accent2;
   max-width: 30%;
 }
 
 
 .posts-tag-id{
-  color: #545f58;
+  color: $color-accent2;
   display: flex;
   max-width: 60%;
 }

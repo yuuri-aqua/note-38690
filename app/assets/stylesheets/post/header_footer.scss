@@ -3,10 +3,15 @@ $color-accent2: #1a3328;
 $color-accent3: #80791d;
 $color-accent4: #b1ab9f;
 
+/* ==========================================================================
+ * ヘッダー
+ * ========================================================================== */
+
+
 .main-header{
   width: 80%;
   height: 75px;
-  padding: 15px 30px 15px 15px;
+  padding: 15px 25px;
   top: 0;
   left: 0;
   background-color:#231f1f;
@@ -14,25 +19,42 @@ $color-accent4: #b1ab9f;
   z-index: 3;
   margin: 0 10% ;
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo_mini{
+  width: 60px;
+  margin: 0 10px 0 0;
 }
 
 .nav{
-  height: 50px;
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .logo{
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   color:$color-accent4;
+  margin: 8px 5px;
+}
+
+.new_nav{
+  text-decoration: none;
+  color:$color-accent4;
+  font-weight: bold;
+  margin-right: 30px;
 }
 
 .lists-right {
   list-style: none;
   display: flex;
   align-items: flex-end;
+  height: 50px;
 }
 
 .lists-right li{
@@ -65,7 +87,7 @@ $color-accent4: #b1ab9f;
 
 
 /* ==========================================================================
- * タイトル／日時
+ * フッター
  * ========================================================================== */
 
 

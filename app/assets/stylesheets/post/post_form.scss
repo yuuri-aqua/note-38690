@@ -40,10 +40,10 @@ $color-accent4: #b1ab9f;
   width: 100%;
   padding-left: 10px;
   margin: 0 0 10px 0;
-  font-weight: lighter;
   resize: vertical;
-  background-image: image-url('background01.png');
+  background-image: image-url('background_01.png');
   border: none;
+  color: $color-accent1;
 }
 
 /* ==========================================================================
@@ -52,7 +52,7 @@ $color-accent4: #b1ab9f;
 
 .category-box{
   display: flex;
-align-items: center;
+  align-items: center;
 }
 
 .category-box a{
