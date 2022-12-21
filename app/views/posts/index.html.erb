@@ -5,12 +5,16 @@
   </head>
 
   <body>
-    <%= render "shared/header" %>
+    <div class="wrapper">
+      <div class="container">
+        <%= render "shared/header" %>
 
-    <% if @posts.present? %>
-      <%= render "posts_index" %>
-    <% end %>
+        <% if @posts.present? %>
+          <%= render "posts_index" %>
+        <% end %>
 
-    <%= render "shared/footer" %>
+        <%= render "shared/footer" %>
+      </div>
+    </div>
   </body>
 </html>

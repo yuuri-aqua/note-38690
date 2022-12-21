@@ -18,13 +18,13 @@
         
                     <!-- 本文 -->
                     <div class="posts-index_text1">
-                      <%= post.text.truncate(101) %>
+                      <%= post.text.truncate(103) %>
                     </div>
                   </div>
 
                   <!-- タイトル -->
                   <div class="posts-index_title1">
-                    <%= post.title.truncate(14) %>
+                    <%= post.title.truncate(15) %>
                   </div>
                 <% end %>
               </div>
@@ -66,13 +66,12 @@
                     <div class="posts-index_image2_in">
                       <!-- 本文 -->
                       <div class="posts-index_text2">
-                        <%= post.text.truncate(101) %>
+                        <%= post.text.truncate(128) %>
                       </div>
                     </div>
                   </div>
                 <% end %>
               </div>
-
 
               <div class="posts-index_sub">
                 <!-- カテゴリー -->
@@ -95,27 +94,25 @@
             </div>
           </div>
 
-        <% else %>
+        <%else%>
           <% if post.title.present? %>  
-            <!---- 表示３：本文のみ／タイトルあり ---->
-            <div class="posts_index_box_text3">
-              <div class="posts_index_box_text3_main">
-                <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+            <!---- 表示3：画像なし／タイトルあり ---->
+            <div class="posts_index_box_image3">
+              <div class="posts_index_box_image3_out">
+                <div class="posts_index_box_image3_main">
+                  <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
 
-                  <!-- タイトル -->
-                  <div class="posts-index_title3">
-                    <%= post.title.truncate(14) %>
-                  </div>
+                    <!-- タイトル -->
+                    <div class="posts-index_title3">
+                      <%= post.title.truncate(15) %>
+                    </div>
 
-                  <!-- 本文 -->
-                  <div class="posts-index_text3">
-                    <%= post.text.truncate(198) %>
-                      <div class="posts-index_text3_h">
-                        read more ...
-                      </div>
-                  </div>
-
-                <% end %>
+                    <!-- 本文 -->
+                    <div class="posts-index_text3">
+                      <%= post.text.truncate(132) %>
+                    </div>
+                  <% end %>
+                </div>
               </div>
 
               <div class="posts-index_sub">
@@ -138,20 +135,18 @@
               </div>
             </div>
           <% else %>
-          <!---- 表示４：本文のみ／タイトルなし ---->
-            <div class="posts_index_box_text4">
-              <div class="posts_index_box_text4_main">
-                <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
+            <!---- 表示４：本文のみ／タイトルなし ---->
+            <div class="posts_index_box_image4">
+              <div class="posts_index_box_image4_out">
+                <div class="posts_index_box_image4_main">
+                  <%= link_to post_path(post.id), method: :get, class: 'post-indexs_link' do %>
 
-                  <!-- 本文 -->
-                  <div class="posts-index_text4">
-                    <%= post.text.truncate(260) %>
-                      <div class="posts-index_text4_h">
-                        read more ...
-                      </div>
-                  </div>
-
-                <% end %>
+                    <!-- 本文 -->
+                    <div class="posts-index_text4">
+                      <%= post.text.truncate(166) %>
+                    </div>
+                  <% end %>
+                </div>
               </div>
 
               <div class="posts-index_sub">

@@ -6,7 +6,7 @@ $color-accent4: #b1ab9f;
 
 .form-id {
   background-color: $color-accent2;
-  width: 100%;
+  width: 80%;
   padding: 20px 56px 25px;
   position: fixed;
   bottom: 30px;
@@ -80,6 +80,12 @@ align-items: center;
 .category-box_plus{
   margin-left: 15px ;
   height: 30px;
+}
+
+.category-box_plus:hover {
+  opacity: 0.3;
+  background: $color-accent1;
+  transition:all 0.2s ease;
 }
 
 
