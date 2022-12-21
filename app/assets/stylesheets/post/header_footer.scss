@@ -4,15 +4,16 @@ $color-accent3: #80791d;
 $color-accent4: #b1ab9f;
 
 .main-header{
-  width: 100%;
+  width: 80%;
   height: 75px;
   padding: 15px 30px 15px 15px;
-  position: fixed;
   top: 0;
   left: 0;
-  background-color:#222222;
+  background-color:#231f1f;
   border-bottom: 5px solid $color-accent3 ;
   z-index: 3;
+  margin: 0 10% ;
+  position: fixed;
 }
 
 .nav{
@@ -69,12 +70,12 @@ $color-accent4: #b1ab9f;
 
 
 .main-footer{
-  width: 100%;
+  width: 80%;
   padding: 8px 0px 12px;
   position: fixed;
   bottom: 0;
   border-top: 5px solid $color-accent3;
-  background-color:#222222;
+  background-color:#231f1f;
 }
 
 .copyright{
