@@ -9,49 +9,72 @@
       <%= render "shared/header" %>
 
       <div class= "posts-all_form">
-        <%= render "posts_show" %>
+        <div class="posts-all">
+          <%= render "posts_show" %>
+        </div>
       </div>
 
         <!-- PATCHメソッドver. -->
         <%= form_with model: @post_form, url: post_path, method: :patch, id: 'new_post', class:'form-id', local: true do |f| %>
 
           <div class="form-box">
+            <!-- 本文 -->
+            <div class="form-contents-box">
+              <i class="fa-solid fa-pen-nib", style="color : #80791d"></i>
               <%= f.text_area :text, class: 'form-contents-id', placeholder: '本文' %>
-              
-              <div class="form-box_other">
-                <div class="form-input-id">
-                  <div class='category-box'>
-                    <%= f.collection_select :category_id, Category.all, :id, :genre,{include_blank: "カテゴリを選択"}, {class: "category-id"} %>
-                    <div class="category-box_plus">
-                      <%= link_to new_category_path  do %>
-                        <i class="fa-solid fa-circle-plus", style="margin-right:6px; color:#80791d"></i></i>追加
-                      <% end %>
-                    </div>
-                  </div>
+            </div>
 
+            <div class="form-box_other">
+              <div class="form-input-id">
+
+                <!-- カテゴリ -->
+                <div class='form-category-box', style="color : #80791d">
+                  <i class="fa-solid fa-folder"></i>
+                  <%= f.collection_select :category_id, Category.all, :id, :genre,{include_blank: "カテゴリを選択"}, {class: "form-category-id"} %>
+                  <div class="form-category-box_plus">
+                    <%= link_to new_category_path  do %>
+                      <i class="fa-solid fa-circle-plus", style="margin-right:6px; color:#80791d"></i></i>追加
+                    <% end %>
+                  </div>
+                </div>
+
+                <!-- 画像 -->
+                <div class="form-image-id">
+                  <i class="fa-regular fa-image", style="color:#b1ab9f"></i>
                   <label class="image-label-id">
                     <%= f.file_field :images, class: "hidden", multiple: true, onchange: "loadImage(this);" %>
-                    <i class="fa-regular fa-image", style="margin-right:6px; color:#1a3328"></i>
                     <span class="image-label-id_label">画像を選択</span> 
                   </label>
-                  <div id="post_images" style="display: none;" class="image-pre">
-                    <p id="preview"></p>
-                  </div>
-                  <%= render "loadimage" %>
+                  <p>※画像はもう１度選択して下さい</p>
+                </div>
+                <div id="post_images" style="display: none;" class="image-pre">
+                  <p id="preview"></p>
+                </div>
+                <%= render "loadimage" %>
 
+                <!-- タイトル -->
+                <div class="form-title-box">
+                  <i class="fa-solid fa-list", style="color:#b1ab9f"></i>
                   <%= f.text_field :title, class: 'form-title-id', placeholder: 'タイトル' %>
-                  <%= f.text_field :tag_name, placeholder: 'タグを追加：,半角カンマ区切りで複数可', class: 'tag-id' %>
-                </div><br>
-                
-                <label class="submit-label-id">
-                  <%= f.submit class: 'hidden', type: 'button', onclick: 'submit();'%>
-                  <i class="fa-solid fa-paper-plane", style="margin-right:3px; color:#342520"></i>
-                  <span class="image-label-id_label">送信</span> 
-                </label>
+                </div>
 
+                <!-- タグ -->
+                <div class="form-tag-box", style="color:#b1ab9f">
+                  <i class="fa-solid fa-tag"></i>
+                  <%= f.text_field :tag_name, placeholder: 'タグを追加：,半角カンマ区切りで複数可', class: 'tag-id' %>
+                </div>
               </div>
+              
+              <!-- 送信ボタン -->
+              <label class="submit-label-id">
+                <%= f.submit class: 'hidden', type: 'button', onclick: 'submit();'%>
+                <i class="fa-solid fa-paper-plane", style="margin-right:3px; color:#342520"></i>
+                <span class="image-label-id_label">送信</span> 
+              </label>
+
             </div>
-          <% end %>
+          </div>
+        <% end %>
       <%= render "shared/footer" %>
     </div>
   </div>

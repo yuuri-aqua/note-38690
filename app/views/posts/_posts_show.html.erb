@@ -1,88 +1,84 @@
-<div class="posts-all">
-  <div class="posts-id-show"> 
-    <div class="posts-show-box"> 
-      <% if @post.title.present? %>
+<div class="posts-show-box"> 
 
-      <!-- タイトル -->
-      <div class="posts-title-id">
-        <p><%= @post.title %></p>
+  <% if @post.title.present? %>
+  <!-- タイトル -->
+  <div class="posts-title-id">
+    <p><%= @post.title %></p>
+  </div>
+  <% end %>
+
+  <!-- 作成日時 -->
+  <div class="posts-timestamp-id">
+    <p><%= @post.created_at %></p>
+  </div>
+
+  <div class='submenu'>
+    <!-- ブックマーク -->
+    <div class="posts-submenu-id">
+      <div id = "bookmark_button_<%= @post.id %>">
+        <span class="tooltip">
+          <%= render "bookmarks/bookmark", post: @post %>
+        <span class="description_bottom">ブックマーク</span></span>
       </div>
+    </div>
+
+    <!-- 詳細表示 -->
+    <div class="posts-submenu-id">
+      <%= link_to post_path(@post.id), method: :get, class: 'btn btn-default' do %>
+        <span class="tooltip">
+          <i class="fa-regular fa-file-lines", style="color :#1a3328"></i>
+        <span class="description_bottom">詳細</span></span>
       <% end %>
+    </div>
 
-      <!-- 作成日時 -->
-      <div class="posts-timestamp-id">
-        <p><%= @post.created_at %></p>
-      </div>
+    <!-- 削除 -->
+    <div class="posts-submenu-id">
+      <%= link_to post_path(@post.id), method: :delete, class: 'btn btn-default', data: {confirm: "削除しますか？"} do  %>
+        <span class="tooltip">
+          <i class="fa-solid fa-trash", style="color : #1a3328"></i>
+        <span class="description_bottom">削除</span></span>
+      <% end %>
+    </div>
 
-      <div class='submenu'>
-        <!-- ブックマーク -->
-        <div class="posts-submenu-id">
-          <div id = "bookmark_button_<%= @post.id %>">
-            <span class="tooltip">
-              <%= render "bookmarks/bookmark", post: @post %>
-            <span class="description_bottom">ブックマーク</span></span>
-          </div>
+    <!-- 編集 -->
+    <div class="posts-submenu-id">
+      <%= link_to edit_post_path(@post.id), method: :get, class: 'btn btn-default' do  %>
+        <span class="tooltip">
+          <i class="fa-solid fa-pen-to-square", style="color : #1a3328"></i>
+        <span class="description_bottom">編集</span></span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="posts-text-id">
+    <!-- 本文 -->
+    <%=safe_join(@post.text.split("\n"),tag(:br))%>
+    <!-- 画像 -->
+    <div class="posts-image-id">
+      <% @post.images.each do |image| %>
+        <div class="posts-image-one">
+          <%= image_tag(image) %>
         </div>
+      <% end %>
+    </div>
+  </div>
 
-        <!-- 詳細表示 -->
-        <div class="posts-submenu-id">
-          <%= link_to post_path(@post.id), method: :get, class: 'btn btn-default' do %>
-            <span class="tooltip">
-              <i class="fa-regular fa-file-lines", style="color :#1a3328"></i>
-            <span class="description_bottom">詳細</span></span>
-          <% end %>
-        </div>
+  <div class="posts-sub_box">
+    <!-- カテゴリー -->
+    <div class="posts-category-id">
+      <p>
+        <i class="fa-regular fa-folder"></i>
+        <%= @post.category.genre %>
+      </p>
+    </div>
 
-        <!-- 削除 -->
-        <div class="posts-submenu-id">
-          <%= link_to post_path(@post.id), method: :delete, class: 'btn btn-default', data: {confirm: "削除しますか？"} do  %>
-            <span class="tooltip">
-              <i class="fa-solid fa-trash", style="color : #1a3328"></i>
-            <span class="description_bottom">削除</span></span>
-          <% end %>
+    <!-- タグ -->
+    <div class="posts-tag-id">
+      <% @post.tags.each do |tag| %>
+        <div class='posts-tag-one'>
+          <%= '#' + tag.tag_name if @post.tags.first.present? %>
         </div>
-
-        <!-- 編集 -->
-        <div class="posts-submenu-id">
-          <%= link_to edit_post_path(@post.id), method: :get, class: 'btn btn-default' do  %>
-            <span class="tooltip">
-              <i class="fa-solid fa-pen-to-square", style="color : #1a3328"></i>
-            <span class="description_bottom">編集</span></span>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="posts-text-id">
-        <!-- 本文 -->
-        <%=safe_join(@post.text.split("\n"),tag(:br))%>
-        <!-- 画像 -->
-        <div class="posts-image-id">
-          <% @post.images.each do |image| %>
-            <div class="posts-image-one">
-              <%= image_tag(image) %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="posts-sub_box">
-        <!-- カテゴリー -->
-        <div class="posts-category-id">
-          <p>
-            <i class="fa-regular fa-folder"></i>
-            <%= @post.category.genre %>
-          </p>
-        </div>
-
-        <!-- タグ -->
-        <div class="posts-tag-id">
-          <% @post.tags.each do |tag| %>
-            <div class='posts-tag-one'>
-              <%= '#' + tag.tag_name if @post.tags.first.present? %>
-            </div>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

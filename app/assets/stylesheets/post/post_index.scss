@@ -12,6 +12,7 @@ $color-accent4: #b1ab9f;
   justify-content: center;
   padding: 50px 30px 100px;
   background-image: image-url('background_01.jpg');
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   opacity: 1;
 }
 
@@ -70,7 +71,7 @@ $color-accent4: #b1ab9f;
   border-radius: 10px;
   padding-top: 7px;
   background-color: $color-accent2;
-
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  
 }
 
 .posts_index_box_image1_main{
@@ -79,6 +80,7 @@ $color-accent4: #b1ab9f;
   margin: 13px auto 0;
   padding-top: 8px;
   border: 1px solid $color-accent3;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
 
 .posts-index_image1{
@@ -120,7 +122,6 @@ $color-accent4: #b1ab9f;
   color: $color-accent4;
   border-top: 5px solid $color-accent3;
   padding-top: 3px;
-
 }
 
 
@@ -140,6 +141,7 @@ $color-accent4: #b1ab9f;
   border-radius: 10px;
   border: 1px solid $color-accent2;
   background-color: $color-accent2;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  
 }
 
 
@@ -147,7 +149,8 @@ $color-accent4: #b1ab9f;
   width: 240px;
   height: 240px;
   position: relative;
-}
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+ }
 
 .posts-index_image2_in{
   width: 220px;
@@ -158,6 +161,7 @@ $color-accent4: #b1ab9f;
   bottom: 0;
   left: 10px;
   right: 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
 
 .posts-index_text2{
@@ -203,7 +207,7 @@ $color-accent4: #b1ab9f;
   border-radius: 10px;
   padding-top: 7px;
   background-color: $color-accent2;
-
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  
 }
 
 .posts_index_box_image3_main{
@@ -212,6 +216,7 @@ $color-accent4: #b1ab9f;
   margin: 13px auto 0;
   padding-top: 8px;
   border: 1px solid $color-accent3;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
 
 .posts-index_text3{
@@ -221,6 +226,8 @@ $color-accent4: #b1ab9f;
   overflow: hidden;
   padding: 14px 10px 20px;
   color: $color-accent4;
+  display: flex;
+  align-items: center;
 }
 
 .posts-index_text3:hover{
@@ -255,7 +262,7 @@ $color-accent4: #b1ab9f;
   border-radius: 10px;
   padding-top: 7px;
   background-color: $color-accent2;
-
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  
 }
 
 .posts_index_box_image4_main{
@@ -263,6 +270,7 @@ $color-accent4: #b1ab9f;
   height: 240px;
   margin: 13px auto 0;
   border: 1px solid $color-accent3;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
 
 .posts-index_text4{
@@ -272,6 +280,8 @@ $color-accent4: #b1ab9f;
   overflow: hidden;
   padding: 14px 12px 20px;
   color: $color-accent4;
+  display: flex;
+  align-items: center;
 }
 
 .posts-index_text4:hover{

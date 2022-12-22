@@ -7,7 +7,7 @@ $color-accent4: #b1ab9f;
 .form-id {
   background-color: $color-accent2;
   width: 80%;
-  padding: 20px 56px 25px;
+  padding: 20px 50px 25px 40px;
   position: fixed;
   bottom: 30px;
   border-top: solid 10px $color-accent1;
@@ -30,9 +30,24 @@ $color-accent4: #b1ab9f;
   width: 100%;
 }
 
+::placeholder {
+  color: $color-accent1;
+}
+
 /* ==========================================================================
  * 本文
  * ========================================================================== */
+
+.form-contents-box{
+  display: flex;
+}
+
+.form-contents-box > i{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  padding: 5px 10px 0 0;
+}
 
 .form-contents-id {
   outline: 0;
@@ -41,8 +56,8 @@ $color-accent4: #b1ab9f;
   padding-left: 10px;
   margin: 0 0 10px 0;
   resize: vertical;
-  background-image: image-url('background_01.png');
-  border: none;
+  background-image: image-url('background_01.jpg');
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   color: $color-accent1;
 }
 
@@ -50,17 +65,24 @@ $color-accent4: #b1ab9f;
  * カテゴリー
  * ========================================================================== */
 
-.category-box{
+.form-category-box{
   display: flex;
-  align-items: center;
 }
 
-.category-box a{
+.form-category-box > i{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  padding: 5px 10px 0 0;
+}
+
+.form-category-box a{
   text-decoration: none;
   color: $color-accent3;
+  box-shadow: rgba(33, 35, 38, 1) 0px 10px 10px -10px;
 }
 
-.category-id{
+.form-category-id{
   color: #222222;
   width: 135px;
   height: 30px;
@@ -69,20 +91,22 @@ $color-accent4: #b1ab9f;
   background-color: $color-accent3;
   border-radius: 10px;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
-.category-id:hover {
+.form-category-id:hover {
   opacity: 0.3;
   background: $color-accent4;
   transition:all 0.2s ease;
 }
 
-.category-box_plus{
+.form-category-box_plus{
   margin-left: 15px ;
+  padding: 8px 0 0 0;
   height: 30px;
 }
 
-.category-box_plus:hover {
+.form-category-box_plus:hover {
   opacity: 0.3;
   background: $color-accent1;
   transition:all 0.2s ease;
@@ -92,6 +116,22 @@ $color-accent4: #b1ab9f;
 /* ==========================================================================
  * 画像
  * ========================================================================== */
+
+.form-image-id{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-image-id > i{
+  font-size: 18px;
+  padding: 6px 10px 0 0;
+}
+
+.form-image-id > p{
+  font-size: 12px;
+  padding: 10px 0 0 14px;
+  color: $color-accent4;
+}
 
 .hidden{
   display: none;
@@ -109,6 +149,7 @@ $color-accent4: #b1ab9f;
   text-decoration: none;
   border-radius: 10px;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 .image-label-id:hover {
@@ -135,6 +176,17 @@ $color-accent4: #b1ab9f;
  * タイトル
  * ========================================================================== */
 
+.form-title-box{
+  display: flex;
+}
+
+.form-title-box > i{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  padding: 5px 10px 0 0;
+}
+
  .form-title-id {
   outline: 0;
   background-color: #cccccc;
@@ -143,11 +195,24 @@ $color-accent4: #b1ab9f;
   margin: 0 0 10px 0;
   padding-left: 10px;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 /* ==========================================================================
  * タグ
  * ========================================================================== */
+
+ .form-tag-box{
+  display: flex;
+}
+
+.form-tag-box > i{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  padding: 5px 12px 0 0;
+}
+
 
 .tag-id{
   background-color: #cccccc;
@@ -157,6 +222,7 @@ $color-accent4: #b1ab9f;
   padding-left: 10px;
   margin: 0 0 10px;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 /* ==========================================================================
@@ -175,6 +241,7 @@ $color-accent4: #b1ab9f;
   font-weight: bold;
   text-align: center;
   padding: 30px 8px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 .submit-label-id:hover {

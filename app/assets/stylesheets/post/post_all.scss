@@ -12,9 +12,15 @@ body {
   color: $color-accent3;
   font-family: "Sawarabi Gothic";
   line-height: 1.5em;
+  background-image: image-url('background_02.jpg');
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wrapper{
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   background-image: image-url('background_02.jpg');
   background-repeat: no-repeat;
@@ -25,21 +31,23 @@ body {
   width: 80%;
   height: 100%;
   margin: 0 auto;
-}
-
-.posts-all{
-  width: 100%;
-  height: 100%;
-  padding: 130px 50px 100px;
   background-color:$color-accent1;
-  font-family: "Sawarabi Gothic";
-  line-height: 1.5em;
 }
 
 .posts-all_form{
   width: 100%;
   height: 100%;
   padding: 0px 0px 250px;
+}
+
+
+.posts-all{
+  width: 100%;
+  height: 100%;
+  padding: 130px 50px 100px;
+  background-color:$color-accent1;
+   font-family: "Sawarabi Gothic";
+  line-height: 1.5em;
 }
 
 
@@ -51,20 +59,21 @@ body {
 .posts-all-box_one{
   background-image: image-url('background_01.jpg');
   margin-bottom: 30px ;
-  padding: 20px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+
 .posts-show-box{
-  width: 100%;
   height: 100%;
-  padding: 20px;
+  width: 100%;
+  padding: 30px;
   background-image: image-url('background_01.jpg');
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   color: $color-accent1;
 }
 
-.post-id-show{
-  padding: 100px 10px 0px;
-}
+
 
 /* ==========================================================================
  * タイトル／日時
@@ -125,7 +134,7 @@ body {
   width : 100%;
   padding: 10px 15px 10px 15px;
   line-height: 1.4;
-  border-bottom: 3px solid $color-accent2;
+  border-bottom: 1px solid $color-accent2;
   color: $color-accent1;
 }
 
@@ -138,9 +147,10 @@ body {
 }
 
 .posts-image-all > img {
-  height: 30vh;
+  height: 35vh;
   width: auto;
   margin: 0 10px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 .posts-image-one > img{
@@ -155,7 +165,7 @@ body {
 .posts-sub_box{
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 8px 5px 13px;
 }
 
 .posts-category-id {
