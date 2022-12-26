@@ -15,8 +15,7 @@
         </div>
 
         <!-- GETメソッドver. -->
-
-          <%= form_with model: @post_form, url: new_post_path, id: 'new_post', class:'form-id', local: true do |f| %>
+          <%= form_with model: @post_form, url: posts_path, id: 'new_post', class:'form-id', local: true do |f| %>
             <div class="form-box">
             <!-- 本文 -->
             <div class="form-contents-box">

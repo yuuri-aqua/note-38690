@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     tag_list = params[:post_form][:tag_name].split(',')
     if @post_form.valid?
       @post_form.save(tag_list)
-      redirect_to posts_path
+      redirect_to new_post_path
     else
       @user = current_user
       @posts = @user.posts.order(id: 'DESC')
