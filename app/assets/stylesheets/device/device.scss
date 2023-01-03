@@ -6,9 +6,9 @@ $color-accent4: #b1ab9f;
 
 .device{
   width: 80%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
-  margin-top: 10px;
   background-color: $color-accent1;
 }
 
@@ -22,7 +22,7 @@ $color-accent4: #b1ab9f;
   margin: 120px 0 100px;
   width: 50%;
   height: 100%;
-  padding-top:10px ;
+  padding-top: 10px;
   background-image: image-url('background_01.jpg');
 }
 
