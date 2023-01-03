@@ -5,19 +5,31 @@ $color-accent4: #b1ab9f;
 
 .contents-box{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.hero-box{
+  width: 100%;
+  height: 100vh;
+  margin: 0 50px;
 }
 
 .hero-img{
-  width: 90%;
-  height: 100vh;
-  background-color: cadetblue;
+  width: 100%;
+  height: 94vh;
+  object-fit: cover;
+  opacity: 1;
 }
 
-.item{
-  width: 250px;
-  margin: 10px;
-  background-color: rgb(170, 214, 252);
+.hero-box > p{
+
+  color: $color-accent1;
+  font-size: 20px;
+  position: relative;
+  top:150px;
+  left: 50px;
+  opacity: 2;
 }
